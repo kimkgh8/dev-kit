@@ -11,7 +11,26 @@
 
 	<body>
 		<div>
-			<h1>쿼리파라미터 합성기</h1>
+			<h1>쿼리파라미터 합성</h1>
+		</div>
+		<div>
+			<label>쿼리</label>
+			<textarea class="gh-query-area" name="query">
+			</textarea>
+		</div>
+		<div>
+			<label>파라미터</label>
+			<textarea class="gh-parameter-area" name="parameter">
+			</textarea>
+		</div>
+		<div>
+			<label>결과</label>
+			<textarea class="gh-result-area" name="result">
+			</textarea>
+		</div>
+		<div>
+			<button class="gh-generate-btn" type="button">generate</button>
 		</div>
 	</body>
+	<script type="text/javascript" th:src="@{/js/sqlgenerator/sqlgenerator.js}"></script>
 </html>
