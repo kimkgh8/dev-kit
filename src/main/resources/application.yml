@@ -10,3 +10,6 @@ spring:
     prefix: classpath:/templates/
     suffix: .html
     enabled: true
+
+logging:
+  config: classpath:static/log/logback.xml
