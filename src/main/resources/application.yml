@@ -6,10 +6,15 @@ spring:
       enabled: true
   thymeleaf:
     cache: false
-    check-template-location: true
-    prefix: classpath:/templates/
-    suffix: .html
-    enabled: true
+    mode: HTML
+    encoding: UTF-8
+    prefix: file:src/main/resources/templates/
+  web:
+    resources:
+      static-locations: file:src/main/resources/static/
+      cache:
+        period: 0
+
 
 logging:
   config: classpath:static/log/logback.xml
