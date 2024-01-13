@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="kr"
+<html lang="ko"
 	xmlns:th="http://www.thymeleaf.org"
 	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 
@@ -7,11 +7,13 @@
 		<title layout:title-pattern="$LAYOUT_TITLE : $CONTENT_TITLE">공통 타이틀</title>
 	</head>
 
-	<body>
-		<header th:replace="~{common/header :: 'HeaderFragment'}"></header>
+	<body class="homepage is-preload">
+		<div id="page-wrapper">
+			<header th:replace="~{common/header :: 'HeaderFragment'}"></header>
 
-		<th:block layout:fragment="Content"></th:block>
+			<th:block layout:fragment="Content"></th:block>
 
-		<footer th:replace="~{common/footer :: 'FooterFragment'}"></footer>
+			<footer th:replace="~{common/footer :: 'FooterFragment'}"></footer>
+		</div>
 	</body>
 </html>
