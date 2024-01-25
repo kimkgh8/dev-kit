@@ -19,7 +19,7 @@ configurations {
 }
 
 repositories {
-	mavenCentral()
+	jcenter()
 }
 
 dependencies {
@@ -39,4 +39,11 @@ dependencies {
 
 tasks.named('test') {
 	useJUnitPlatform()
+}
+jar {
+	manifest {
+		attributes(
+			'Main-Class': 'com.dev.kit.functions.FunctionsApplicationgradle build'
+		)
+	}
 }
