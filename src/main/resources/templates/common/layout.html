@@ -7,13 +7,17 @@
 		<title layout:title-pattern="$LAYOUT_TITLE : $CONTENT_TITLE">공통 타이틀</title>
 	</head>
 
-	<body class="homepage is-preload">
+	<body class="no-sidebar is-preload">
 		<div id="page-wrapper">
-			<header th:replace="~{common/header :: 'HeaderFragment'}"></header>
-
-			<th:block layout:fragment="Content"></th:block>
-
-			<footer th:replace="~{common/footer :: 'FooterFragment'}"></footer>
+			<section id="header">
+				<header th:replace="~{common/header :: 'HeaderFragment'}"></header>
+			</section>
+			<section id="main">
+				<th:block layout:fragment="Content"></th:block>
+			</section>
+			<section id="footer">
+				<footer th:replace="~{common/footer :: 'FooterFragment'}"></footer>
+			</section>
 		</div>
 	</body>
 </html>
