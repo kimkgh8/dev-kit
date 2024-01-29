@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{common/layout}"
+	layout:fragment="Content"
+>
+	<head>
+		<title>パラメータークエリ</title>
+		<link rel="stylesheet" href="/css/sub.css">
+		<meta name="description" content="쿼리와 파마미터를 이용하여 쿼리 생성"/>
+		<meta name="keywords" content="쿼리, 파라미터, query, parameter, query parameter" />
+		<meta name="og:site_name" content="Dev" />
+		<meta name="og:title" content="쿼리" />
+		<meta name="og:description" content="쿼리와 파마미터를 이용하여 쿼리 생성" />
+		<meta name="og:type" content="website" />
+		<meta name="og:url" content="http://rootmik.com/sqlgenerator/kr" />
+	</head>
+
+	<body>
+			<div class="container">
+				<header>
+					<h2>쿼리 조합</h2>
+					<p>쿼리와 파라미터를 이용한 완성된 쿼리 생성</p>
+				</header>
+				<p>
+					<label>쿼리</label>
+					<textarea class="gh-query-area" name="query"></textarea>
+				</p>
+				<p>
+					<label>파라미터</label>
+					<textarea class="gh-parameter-area" name="parameter"></textarea>
+				</p>
+				<p>
+					<label>결과</label>
+					<textarea class="gh-result-area" name="result"></textarea>
+				</p>
+				<p>
+						<button class="gh-generate-btn" type="button">generate</button>
+				</p>
+			</div>
+
+
+	</body>
+	<script type="text/javascript" th:src="@{/js/sqlgenerator/sqlgenerator.js}"></script>
+</html>

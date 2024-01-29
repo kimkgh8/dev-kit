@@ -6,9 +6,14 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class SqlGeneratorController {
-	@GetMapping
-	public String page() {
-		return "sqlgenerator/sqlgenerator";
+	@GetMapping(value = "/sqlgenerator/kr")
+	public String pageByKr() {
+		return "sqlgenerator/sqlgenerator_kr";
+	}
+
+	@GetMapping(value = "/sqlgenerator/jp")
+	public String pageByJp() {
+		return "sqlgenerator/sqlgenerator_jp";
 	}
 
 }

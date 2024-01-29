@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{common/layout}"
+	layout:fragment="Content"
+>
+	<head>
+		<title>パラメータークエリ</title>
+		<link rel="stylesheet" href="/css/sub.css">
+		<meta name="description" content="クエリとパラメーターでクエリ生成させる"/>
+		<meta name="keywords" content="クエリ, パラメーター, query, parameter, query parameter" />
+		<meta name="og:site_name" content="Dev" />
+		<meta name="og:title" content="パラメータークエリ" />
+		<meta name="og:description" content="クエリとパラメーターでクエリ生成させる" />
+		<meta name="og:type" content="website" />
+		<meta name="og:url" content="http://rootmik.com/sqlgenerator/kr" />
+	</head>
+
+	<body>
+			<div class="container">
+				<header>
+					<h2>パラメータークエリ</h2>
+					<p>クエリとパラメーターでクエリ生成</p>
+				</header>
+				<p>
+					<label>クエリ</label>
+					<textarea class="gh-query-area" name="query"></textarea>
+				</p>
+				<p>
+					<label>パラメーター</label>
+					<textarea class="gh-parameter-area" name="parameter"></textarea>
+				</p>
+				<p>
+					<label>結果</label>
+					<textarea class="gh-result-area" name="result"></textarea>
+				</p>
+				<p>
+						<button class="gh-generate-btn" type="button">生成</button>
+				</p>
+			</div>
+
+
+	</body>
+	<script type="text/javascript" th:src="@{/js/sqlgenerator/sqlgenerator.js}"></script>
+</html>
